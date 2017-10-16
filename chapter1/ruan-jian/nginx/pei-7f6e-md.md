@@ -35,8 +35,7 @@ fastcgi_param  REDIRECT_STATUS    200;
 
 # 优化内核参数
 
-- vim /etc/sysctl.conf
-
+* vim /etc/sysctl.conf
 
 ```shell
 # Kernel sysctl configuration file for Red Hat Linux
@@ -89,10 +88,9 @@ net.ipv4.tcp_syncookies = 1
 net.ipv4.tcp_max_syn_backlog = 1024
 net.ipv4.tcp_synack_retries = 2
 net.ipv4.conf.lo.arp_announce=2
-
 ```
-* 防ddos
 
+* 防ddos
 
 ```shell
 ##自定义
@@ -112,12 +110,11 @@ net.ipv4.conf.lo.arp_announce=2
      net.ipv4.tcp_fin_timeout = 30
 
    #以上4个绿色的设置,以防DDoS,CC和SYN攻击
-
 ```
+
 * 提升并发
 
 ```shell
-
   #设置TCP 发送keepalive的频度,默认的缺省为2小时,1200秒表示20分钟,表示服务器以20分钟发送keepalive消息
 
    net.ipv4.tcp_keepalive_time = 1200
@@ -179,8 +176,7 @@ net.ipv4.conf.lo.arp_announce=2
 
   #设置tcp fin状态的超时时间为120秒,超过该时间自动关闭
     net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
-
-
 ```
+
 
 
