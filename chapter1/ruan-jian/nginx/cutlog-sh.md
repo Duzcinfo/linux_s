@@ -2,8 +2,6 @@
 details: nginx日志切割脚本
 ---
 
-
-
 > nginx 日志切割脚本
 
 ```shell
@@ -17,7 +15,6 @@ Mounth=`date -d "yesterday" +"%m"`
 mkdir -p ${Logs_path}/${Years}/${Mounth}/
 mv ${Logs_path}access.log  ${Logs_path}/${Years}/${Mounth}/access_$(date -d "yesterday" +"%Y%m%d").log
 kill -USR1 `path/nginx.pid`
-
 ```
 
 ```shell
@@ -29,11 +26,15 @@ kill -HUP $pid
 gzip -f /tmp/$d.log
 ```
 
-将脚本放入`crontab `
+将脚本放入`crontab`
 
 ```shell
 00 00 * * * /bin/bash   /usr/local/sbin/nginx_logrotate.sh
 ```
 
 
+
+
+
+22
 
