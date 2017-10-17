@@ -32,9 +32,5 @@ gzip -f /tmp/$d.log
 00 00 * * * /bin/bash   /usr/local/sbin/nginx_logrotate.sh
 ```
 
-
-
-
-
-22
+22233
 
