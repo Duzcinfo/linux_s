@@ -1,6 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
+  * [数据库](shu-ju-ku.md)
+    * [mysql](shu-ju-ku/mysql.md)
+      * [问题及解决.md](shu-ju-ku/mysql/wen-ti-ji-jie-51b3-md.md)
 * [linux系统](chapter1.md)
   * [硬件](chapter1/ying-jian.md)
   * [软件](chapter1/ruan-jian.md)
