@@ -1,5 +1,4 @@
 ```php
-
 <?php  
 error_reporting(0);
 header('content-type:text/html;charset=utf-8');  
@@ -65,7 +64,7 @@ $tab_name = $array[$i]['Name'];
 $sql_tab='show full fields from `' . $array[$i]['Name'].'`';  
 $tab_result=mysql_query($sql_tab);  
 $tab_array=array();  
-   
+
 while($r=mysql_fetch_assoc($tab_result)){  
     $tab_array[]=$r;  
 }  
@@ -104,10 +103,10 @@ $arr_keys=mysql_fetch_array($keys_result);
     }  
     echo '  </table></li>'."\n";  
     echo '</ul>'."\n";  
-   
+
 }  
 echo '</body>'."\n";  
-echo '</html>'."\n";  
+echo '</html>'."\n";
 ```
 
 
