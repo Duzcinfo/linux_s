@@ -13,5 +13,5 @@
       * [cut\_log.sh](chapter1/ruan-jian/nginx/cutlog-sh.md)
 * [shell](shell.md)
 * [linux](linux.md)
-  * SSl.md
+  * [SSl.md](linux/sslmd.md)
 
