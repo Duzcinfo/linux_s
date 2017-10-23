@@ -87,7 +87,7 @@ Certificate:
         Validity
             Not Before: Oct 23 07:19:02 2017 GMT ##证书有效期
             Not After : Oct 23 07:19:02 2018 GMT
-            
+
             ##证书持有者
         Subject: C=CN, ST=cq, L=cq, O=cq, OU=cq, CN=cq/emailAddress=550923902@qq.com
         Subject Public Key Info:
@@ -139,10 +139,20 @@ DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOBgQAKoh3PeF6lTogNVmaDvBB+
 isd2Zg+ZmXfL5BiUs6qd+CvEBCws5Qe/5rHeOi5ds4rnjM3tnzCzJ34dXDMSeqrd
 PMLLwuxxyyVcNvcykFBB8w==
 -----END CERTIFICATE-----
-
 ```
 
 ## 
+
+红帽系列还需配置`/etc/pki/tls/openssl.cnf                     `--->[CA_default]
+
+ubuntu `/etc/ssl/openssl.cnf` -->[CA_default]
+CA目录下的文件：
+```shell
+dir:certs newcerts crl
+text:index.txt serial
+echo 01 > serial  
+```
+
 
 ## 非对称加密（公钥加密）
 
