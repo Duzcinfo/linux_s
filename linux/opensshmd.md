@@ -4,7 +4,13 @@
 
 1.生成一对秘钥
 
-2. 将公钥传至服务器端某用户的家目录下.ssh/authorized\_keys
+```shell
+ssh-keygen 
+
+ssh-copy-id "root@host"
+```
+
+2.将公钥传至服务器端某用户的家目录下.ssh/authorized\_keys
 
 3.登录
 
