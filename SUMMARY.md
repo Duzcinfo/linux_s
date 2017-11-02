@@ -11,6 +11,7 @@
     * [nginx](chapter1/ruan-jian/nginx.md)
       * [配置.md](chapter1/ruan-jian/nginx/pei-7f6e-md.md)
       * [cut\_log.sh](chapter1/ruan-jian/nginx/cutlog-sh.md)
+    * [编译参数的查看.md](chapter1/ruan-jian/bian-yi-can-shu-de-cha-770b-md.md)
 * [shell](shell.md)
 * [linux](linux.md)
   * [SSl.md](linux/sslmd.md)
