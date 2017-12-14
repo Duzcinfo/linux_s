@@ -1,7 +1,7 @@
 * 创建数据库
 
 ```mysql
-create zabbix character set utf8 collate utf8_general_ci;
+create database zabbix character set utf8 collate utf8_general_ci;
 show create database zabbix;
 #显示内容
 mysql> show create database zabbix;
@@ -12,13 +12,17 @@ mysql> show create database zabbix;
 +----------+-----------------------------------------------------------------+
 1 row in set (0.00 sec)
 ```
+* 创建用户
+```mysql
+create user 'duzc' identified by 'duzhichuan';
 
+```
 * 授权
 
 ```mysql
 grant select,insert,update,delete,create,drop on dbname.* to "username"@"%" indentified by "passwd";
 # dbname.* 是dbname所有表 
-grant all on  *.* to "username"@"localhost" indentified by "passwd";
+grant all on  *.* to "username"@"localhost" identified by "passwd";
 flush privileges;
 
 select * from user; # 查看mysql user表里的用户
@@ -26,8 +30,6 @@ show grants for username; # 查看用户"username"授的权限
 ```
 
 * 数据类型
-
-
 
 
 
