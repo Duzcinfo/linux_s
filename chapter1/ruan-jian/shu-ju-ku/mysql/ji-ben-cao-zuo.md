@@ -32,6 +32,7 @@ show grants for username; # 查看用户"username"授的权限
 * 数据类型
 
 * 创建表
+
 ```mysql
 mysql> create table student(
     -> id int auto_increment,
@@ -41,13 +42,17 @@ mysql> create table student(
     -> primary key (id));
 Query OK, 0 rows affected (1.08 sec)
 ```
+
+
 * 插入数据
+
 ```mysql
 insert into student (name,age,register_date) values ("duzc","23","2017-12-2");
 
-# 查看
+/* 查看
 select * from student
 select name from student where age="23"
+
 ```
 
 
