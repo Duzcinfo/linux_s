@@ -1,4 +1,17 @@
+* 创建数据库
 
+```mysql
+create zabbix character set utf8 collate utf8_general_ci;
+show create database zabbix;
+#显示内容
+mysql> show create database zabbix;
++----------+-----------------------------------------------------------------+
+| Database | Create Database                                                 |
++----------+-----------------------------------------------------------------+
+| zabbix   | CREATE DATABASE `zabbix` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++----------+-----------------------------------------------------------------+
+1 row in set (0.00 sec)
+```
 
 * 授权
 
@@ -10,7 +23,6 @@ flush privileges;
 
 select * from user; # 查看mysql user表里的用户
 show grants for username; # 查看用户"username"授的权限
- 
 ```
 
 
