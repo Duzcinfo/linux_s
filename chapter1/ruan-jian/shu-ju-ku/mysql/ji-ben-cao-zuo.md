@@ -25,5 +25,9 @@ select * from user; # 查看mysql user表里的用户
 show grants for username; # 查看用户"username"授的权限
 ```
 
+* 数据类型
+
+
+
 
 
