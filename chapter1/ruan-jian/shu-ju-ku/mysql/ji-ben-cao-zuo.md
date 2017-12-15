@@ -54,6 +54,31 @@ select * from student
 select name from student where age="23"
 
 ```
+* 排序
+```mysql
+mysql> select * from student order by id desc;
++----+---------+-----+---------------+
+| id | name    | age | register_date |
++----+---------+-----+---------------+
+|  3 | 子川    |  26 | 2017-12-15    |
+|  2 | wild_du |  25 | 2017-12-14    |
+|  1 | duzc    |  23 | 2017-12-02    |
++----+---------+-----+---------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from student order by id asc;
++----+---------+-----+---------------+
+| id | name    | age | register_date |
++----+---------+-----+---------------+
+|  1 | duzc    |  23 | 2017-12-02    |
+|  2 | wild_du |  25 | 2017-12-14    |
+|  3 | 子川    |  26 | 2017-12-15    |
++----+---------+-----+---------------+
+```
+
+
+
+
 
 
 
