@@ -22,7 +22,7 @@ mysql> show create database zabbix;
 * 授权
 
 ```mysql
-    grant select,insert,update,delete,create,drop on dbname.* to "username"@"%" indentified by "passwd";
+    grant select,insert,update,delete,create,drop on dbname.* to "username"@"%" identified by "passwd";
     # dbname.* 是dbname所有表 
     grant all on  *.* to "username"@"localhost" identified by "passwd";
     flush privileges;
