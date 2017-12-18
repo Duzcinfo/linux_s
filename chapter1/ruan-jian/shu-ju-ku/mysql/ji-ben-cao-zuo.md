@@ -78,5 +78,16 @@ mysql> select * from student order by id asc;
 +----+---------+-----+---------------+
 ```
 
+* 事务
+innodb
 
+    * begin
+    * rollback
+    * commit
 
+* 索引
+    主键只有一个,索引可以有多个.索引(hash)
+    ```mysql
+    create index indexname on tablename(zidaun(length));
+    alter tablename add index [indexname] on (ziduan(length));
+    ```
