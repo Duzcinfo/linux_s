@@ -90,4 +90,7 @@ innodb
     ```mysql
     create index indexname on tablename(zidaun(length));
     alter tablename add index [indexname] on (ziduan(length));
+    #删除索引
+    drop index indexname on tablename;
+    
     ```
