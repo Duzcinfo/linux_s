@@ -7,7 +7,7 @@
     * [读数据库结构.md](shu-ju-ku/du-shu-ju-ku-jie-6784-md.md)
 * [linux系统](chapter1.md)
   * [硬件](chapter1/ying-jian.md)
-    * 清除缓存
+    * [清除缓存](chapter1/ying-jian/qing-chu-huan-cun.md)
   * [软件](chapter1/ruan-jian.md)
     * [nginx](chapter1/ruan-jian/nginx.md)
       * [配置.md](chapter1/ruan-jian/nginx/pei-7f6e-md.md)
