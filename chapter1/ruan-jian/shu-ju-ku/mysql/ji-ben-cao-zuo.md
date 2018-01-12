@@ -30,6 +30,11 @@ mysql> show create database zabbix;
     select * from user; # 查看mysql user表里的用户
     show grants for username; # 查看用户"username"授的权限
 ```
+* 取消授权
+```mysql
+revoke all on *.* from  'root'@'%' ;
+revoke all on *.* from dba@localhost; 
+```
 
 * 数据类型
 
