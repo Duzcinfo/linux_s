@@ -21,6 +21,7 @@
   * [SSl.md](linux/sslmd.md)
   * [openSSH.md](linux/opensshmd.md)
   * [查找与替换.md](linux/san-jian-5ba2-md.md)
-  * 文本处理工具.md
+  * [文本处理工具.md](linux/wen-ben-chu-li-gong-5177-md.md)
+  * [变量-判断-重复动作.md](linux/bian-91cf-pan-65ad-zhong-fu-dong-4f5c-md.md)
 * assets
 
