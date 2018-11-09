@@ -17,6 +17,8 @@ mysql> show create database zabbix;
 
 ```mysql
   create user 'duzc' identified by 'duzhichuan';
+  create user 'duzc'@'%' identified by 'duzhichuan'; #这个账户可以在任何主机登陆，这里可以限制登陆的ip。授权那里也可以做此限制
+
 ```
 
 * 授权
@@ -30,11 +32,13 @@ mysql> show create database zabbix;
     select * from user; # 查看mysql user表里的用户
     show grants for username; # 查看用户"username"授的权限
 ```
+
 * 取消授权
-```mysql
-revoke all on *.* from  'root'@'%' ;
-revoke all on *.* from dba@localhost; 
-```
+
+  ```mysql
+  revoke all on *.* from  'root'@'%' ;
+  revoke all on *.* from dba@localhost;
+  ```
 
 * 数据类型
 
@@ -83,19 +87,22 @@ mysql> select * from student order by id asc;
 +----+---------+-----+---------------+
 ```
 
-* 事务
-innodb
+* 事务  
+  innodb
 
-    * begin
-    * rollback
-    * commit
+  * begin
+  * rollback
+  * commit
 
-* 索引
-    主键只有一个,索引可以有多个.索引(hash)
-    ```mysql
+* 索引  
+    主键只有一个,索引可以有多个.索引\(hash\)
+
+  ```mysql
     create index indexname on tablename(zidaun(length));
     alter tablename add index [indexname] on (ziduan(length));
     #删除索引
     drop index indexname on tablename;
-    
-    ```
+  ```
+
+
+
