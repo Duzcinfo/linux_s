@@ -16,6 +16,7 @@
     * [数据库](chapter1/ruan-jian/shu-ju-ku.md)
       * [mysql](chapter1/ruan-jian/shu-ju-ku/mysql.md)
         * [基本操作](chapter1/ruan-jian/shu-ju-ku/mysql/ji-ben-cao-zuo.md)
+      * [pgsql](chapter1/ruan-jian/shu-ju-ku/pgsql.md)
 * [shell](shell.md)
 * [linux](linux.md)
   * [SSl.md](linux/sslmd.md)
