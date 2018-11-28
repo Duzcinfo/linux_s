@@ -28,12 +28,8 @@ grant all privileges on database ccip_pre to ccip_pre;
 ```
 
 ```sql
-psql  -U  username   -d  dbname -h hostname  -f zch_20181128.sql 
+psql  -U  username   -d  dbname -h hostname  -f zch_20181128.sql
 ```
-
-
-
-
 
 * 问题
 
