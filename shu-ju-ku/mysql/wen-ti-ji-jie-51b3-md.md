@@ -42,7 +42,7 @@ mysql> show global variables like 'open%';
 ```shell
 # 非锁表方式导出数据，不影响原表写入
  mysqldump -uroot -ppasswd --databases dbname --lock-tables=false  > /tmp/20171013_xy.sql
- 
+
 ## mysqldump几种方式 
  1、非锁表方式导出数据，不影响原表写入
 mysqldump  -h    -u  -p  databasename tablename  --lock-table=false  > xx.sql
@@ -50,15 +50,13 @@ mysqldump  -h    -u  -p  databasename tablename  --lock-table=false  > xx.sql
 mysqldump -t -h    -u  -p  databasename tablename  --lock-table=false  > xx.sql
 3、只导出建表语句
 mysqldump -d -h    -u  -p  databasename tablename  --lock-table=false  > xx.sql
- 
+
 4、只导出数据,不带drop-table、lock-tables、set-charset、disable-keys等选项
 mysqldump --skip-opt   -h    -u  -p  databasename tablename  --lock-table=false  > xx.sql
- 
+
  5、带条件导出数据
 mysqldump --skip-opt   -h    -u  -p  databasename tablename  --lock-table=false  -w"status=3 and createtime < '2013-12-01'" > xx.sql
- 
 ```
- 
 
 
 
