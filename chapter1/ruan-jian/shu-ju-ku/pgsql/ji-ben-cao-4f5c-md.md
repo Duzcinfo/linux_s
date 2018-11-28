@@ -48,3 +48,7 @@ psql:zch_20181128.sql:45: ERROR:  role "yuan" does not exist
 
 
 
+[pg 参考](https://emacsist.github.io/2016/01/22/postgresql%E5%A4%87%E4%BB%BDpg_dump%E4%B8%8E%E6%81%A2%E5%A4%8Dpg_restore/)
+
+
+
