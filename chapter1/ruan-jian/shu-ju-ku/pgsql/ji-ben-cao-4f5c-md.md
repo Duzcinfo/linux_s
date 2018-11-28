@@ -1,0 +1,44 @@
+
+---
+
+# 远程登陆 pg 数据库
+
+```sql
+psql -U username -h hostname -p port -d dbname
+
+```
+
+# 备份数据
+
+```sql
+pg_dump  -d ccip_prod --no-owner -f  /tmp/ccip_prod_20181121.sql    #--no-owner参数的意思是不备份数据库owner
+
+
+```
+
+# 数据库的恢复
+
+* 创建数据库
+
+```sql
+create database ccip_
+psql -d ccip_pre -U postgres -f /tmp/ccip_prod_20181121.sql
+
+create user ccip_pre;
+\passwd ccip_pre
+
+grant all privileges on database ccip_pre to ccip_pre;
+```
+
+* 问题
+
+连接数据库并不能直接访问数据，原因是备份恢复的数据库onwer为postgres用户。
+
+```sql
+psql
+\c ccip_pre     #登入数据库
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ccip_pre;
+```
+
+
+

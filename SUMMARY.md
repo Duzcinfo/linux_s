@@ -17,6 +17,7 @@
       * [mysql](chapter1/ruan-jian/shu-ju-ku/mysql.md)
         * [基本操作](chapter1/ruan-jian/shu-ju-ku/mysql/ji-ben-cao-zuo.md)
       * [pgsql](chapter1/ruan-jian/shu-ju-ku/pgsql.md)
+        * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/pgsql/ji-ben-cao-4f5c-md.md)
   * [ubuntu软件安装](chapter1/ubunturuan-jian-an-zhuang.md)
     * [apt安装java.md](chapter1/ubunturuan-jian-an-zhuang/aptan-zhuang-java-md.md)
 * [shell](shell.md)
