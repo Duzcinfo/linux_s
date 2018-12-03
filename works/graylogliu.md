@@ -68,5 +68,31 @@ GET /?wtype=crawler.py&message=%7B%22status%22%3A+%22ERROR%22%2C+%22data%22%3A+%
 }
 ```
 
+报错：
+
+```shell
+(?<status>ERROR).*event=(?<event>\w+).*wname=(?<wname>\w+.*)
+
+# 结果
+{
+  "status": [
+    [
+      "ERROR"
+    ]
+  ],
+  "event": [
+    [
+      "judgement"
+    ]
+  ],
+  "wname": [
+    [
+      "dev-xj HTTP/1.1"
+    ]
+  ]
+}
+
+```
+
 
 
