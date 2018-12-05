@@ -18,7 +18,6 @@ mysql> show create database zabbix;
 ```mysql
   create user 'duzc' identified by 'duzhichuan';
   create user 'duzc'@'%' identified by 'duzhichuan'; #这个账户可以在任何主机登陆，这里可以限制登陆的ip。授权那里也可以做此限制
-
 ```
 
 * 授权
@@ -103,6 +102,74 @@ mysql> select * from student order by id asc;
     #删除索引
     drop index indexname on tablename;
   ```
+
+# mysql8.0
+
+* 创建数据库
+
+```shell
+create database zabbix;
+create user 'zabix'@'%' identified by 'zabbix';
+grant all privileges on zabbix.* to 'zabbix'@'%';
+```
+
+* 授权
+
+MySQL8.0取消了直接grant创建用户的语法，只能先create user再grant，因此创建root如下：
+
+```shell
+mysql> SELECT User, Host FROM mysql.user;
++------------------+-----------+
+| User             | Host      |
++------------------+-----------+
+| dzc              | %         |
+| zabbix           | %         |
+| duzc             | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| zabbix           | localhost |
++------------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> GRANT ALL PRIVILEGES ON duzc_qcd.* TO'duzc'@'192.168.0.106';
+ERROR 1410 (42000): You are not allowed to create a user with GRANT
+##为什么加入这句话是错误的？
+
+mysql> GRANT ALL PRIVILEGES ON duzc_qcd.* TO'duzc'@'localhost';
+Query OK, 0 rows affected (0.15 sec)
+```
+
+官网的列子：
+
+```shell
+
+mysql> CREATE USER 'custom'@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+    ->     ON bankaccount.*
+    ->     TO 'custom'@'localhost';
+mysql> CREATE USER 'custom'@'host47.example.com' IDENTIFIED BY 'password';
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+    ->     ON expenses.*
+    ->     TO 'custom'@'host47.example.com';
+mysql> CREATE USER 'custom'@'%.example.com' IDENTIFIED BY 'password';
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+    ->     ON customer.*
+    ->     TO 'custom'@'%.example.com';
+```
+
+
+
+
+
+用 navicat 连接出错：
+
+```shell
+    2059 -Authentication plugin 'cacing_sh2_password' cannot be loaded
+```
+
+
 
 
 
