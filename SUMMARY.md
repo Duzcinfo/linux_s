@@ -11,6 +11,7 @@
 * [linux系统](chapter1.md)
   * [硬件](chapter1/ying-jian.md)
     * [清除缓存](chapter1/ying-jian/qing-chu-huan-cun.md)
+    * [进程和线程的区别.md](chapter1/ying-jian/jin-cheng-he-xian-cheng-de-qu-522b-md.md)
   * [软件](chapter1/ruan-jian.md)
     * [nginx](chapter1/ruan-jian/nginx.md)
       * [配置.md](chapter1/ruan-jian/nginx/pei-7f6e-md.md)
