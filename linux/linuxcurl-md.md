@@ -1,4 +1,4 @@
-如何用 cul 测试相应网页的速度？
+如何用 curl 测试相应网页的速度？
 
 ```shell
 curl -o /dev/null -s -w %{time_namelookup}:%{time_connect}:%{time_starttransfer}:%{time_total} http://www.baidu.com
