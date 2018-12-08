@@ -27,7 +27,7 @@
         * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/pgsql/ji-ben-cao-4f5c-md.md)
   * [ubuntu软件安装](chapter1/ubunturuan-jian-an-zhuang.md)
     * [apt安装java.md](chapter1/ubunturuan-jian-an-zhuang/aptan-zhuang-java-md.md)
-    * ubuntu18\_network.md
+    * [ubuntu18\_network.md](chapter1/ubunturuan-jian-an-zhuang/ubuntu18network-md.md)
 * [shell](shell.md)
 * [linux](linux.md)
   * [SSl.md](linux/sslmd.md)

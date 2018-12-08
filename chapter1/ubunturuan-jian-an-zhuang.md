@@ -31,6 +31,16 @@ network:
     version: 2
 ```
 
+然后保存
+
+```shell
+sudo netplan apply
+```
+
+
+
+
+
 # dns
 
 ubuntu 18 服务器版 只修改 ``/etc/resolv.conf,dns 还是会改回他的默认值 `127.0.0.53 ` ,导致上不了网。``
@@ -53,10 +63,8 @@ systemd-r 3294 systemd-resolve   13u  IPv4 928129      0t0  TCP localhost:domain
 直接改 /etc/systemd/resolved.conf 这个配置文件
 
 ```shell
-dns= 8.8.8.8 
+dns= 8.8.8.8
 ```
+
 然后重启 `systemctl restart systemd-resolved`
-
-
-
 
