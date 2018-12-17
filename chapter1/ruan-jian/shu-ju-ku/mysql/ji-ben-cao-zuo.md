@@ -159,7 +159,7 @@ mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
     ->     TO 'custom'@'%.example.com';
 ```
 
-##  navicat 连接出错：
+## navicat 连接出错：
 
 ```shell
     2059 -Authentication plugin 'cacing_sh2_password' cannot be loaded
@@ -183,7 +183,7 @@ mysql> select user,host,plugin from mysql.user;
 +------------------+-----------+-----------------------+
 ```
 
-> 显然不能直接update plugin，因为这可能导致加密的密码无法被正确解密，你所有的密码都会变异，因此除[root@'localhost'](mailto:root@'localhost')
+> 显然不能直接update plugin，因为这可能导致加密的密码无法被正确解密，你所有的密码都会变异，因此除\[root@'localhost'\]\(mailto:root@'localhost'\)
 >
 > 外全部删掉重建。
 
@@ -206,10 +206,7 @@ GRANT ALL PRIVILEGES ON duzc_qcd.* TO'duzc'@'192.168.0.105';
 ALTER USER 'duzc'@'192.168.0.105' IDENTIFIED WITH mysql_native_password BY '****'
 
 ##即可使用navicat远程连接
-
 ```
-
-
 
 
 
