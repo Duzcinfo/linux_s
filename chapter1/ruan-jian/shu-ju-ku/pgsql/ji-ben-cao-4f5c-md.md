@@ -46,9 +46,13 @@ psql:zch_20181128.sql:45: ERROR:  role "yuan" does not exist
 #因为导数据的时候，没有加 --no-owner 选项。但这个结果不影响使用。
 ```
 
+[pg 参考](https://emacsist.github.io/2016/01/22/postgresql备份pg_dump与恢复pg_restore/)
 
+* 更改数据库时区
 
-[pg 参考](https://emacsist.github.io/2016/01/22/postgresql%E5%A4%87%E4%BB%BDpg_dump%E4%B8%8E%E6%81%A2%E5%A4%8Dpg_restore/)
+```shell
+ALTER DATABASE gd_data_test SET timezone TO 'Asia/Chongqing';
+```
 
 
 
