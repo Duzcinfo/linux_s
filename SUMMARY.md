@@ -38,5 +38,5 @@
   * [文本处理工具.md](linux/wen-ben-chu-li-gong-5177-md.md)
   * [变量-判断-重复动作.md](linux/bian-91cf-pan-65ad-zhong-fu-dong-4f5c-md.md)
   * [linux\_curl.md](linux/linuxcurl-md.md)
-* assets
+* [assets](assets.md)
 

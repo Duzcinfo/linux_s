@@ -7,3 +7,11 @@ grant all privileges on database test_db to test_db; # 授权
 
 
 
+* 给某些权限
+
+```shell
+grant select on table tablename to xxx;
+```
+
+
+
