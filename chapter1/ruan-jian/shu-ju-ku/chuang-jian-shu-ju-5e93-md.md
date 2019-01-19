@@ -10,6 +10,12 @@ grant all privileges on database test_db to test_db; # 授权
 ```shell
 grant select on table tablename to xxx;
 
+##赋予某个表增删改查的权限
+grant select,update,delete,insert on table bidding to wu_songgen;
+grant select,update,delete,insert on table bidding to liu_tianqi;
+
+
+
 grant select,update on table tablename1,tablename2 to xxx;  #可不可以这样？ ##grant的语法只可以对某个表授予权限
 ```
 
@@ -34,10 +40,6 @@ REVOKE privileges ON tablename FROM user;
 
 # 回收数据库
 
-
-
-
-
 ```shell
 DROP OWNED BY  deep_learning_goods_name_classification; 
 drop  user deep_learning_goods_name_classification;
@@ -47,7 +49,6 @@ REVOKE CONNECT ON DATABASE dbname FROM PUBLIC, username;  # 回收用户数据�
 REVOKE delete ON TABLE sc_courtannouncement FROM username;
 
 drop database [数据库名]; #删除数据库
-
 ```
 
 
