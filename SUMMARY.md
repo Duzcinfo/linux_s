@@ -30,6 +30,7 @@
   * [ubuntu软件安装](chapter1/ubunturuan-jian-an-zhuang.md)
     * [apt安装java.md](chapter1/ubunturuan-jian-an-zhuang/aptan-zhuang-java-md.md)
     * [ubuntu18\_network.md](chapter1/ubunturuan-jian-an-zhuang/ubuntu18network-md.md)
+  * [修改linux系统的时间.md](chapter1/xiu-gai-linux-xi-tong-de-shi-95f4-md.md)
 * [shell](shell.md)
 * [linux](linux.md)
   * [SSl.md](linux/sslmd.md)
