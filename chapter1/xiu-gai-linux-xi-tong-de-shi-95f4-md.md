@@ -1,9 +1,9 @@
 
 ---
 
+> 环境：ubuntu
+
 使用nptdate 时间服务器，但是时间依然没有更改。于是更改想到更改时区。
-
-
 
 ```shell
 date -R 
@@ -53,7 +53,6 @@ sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 date -R
 Wed, 23 Jan 2019 14:19:53 +0800
 # 更改成功
-
 ```
 
 
