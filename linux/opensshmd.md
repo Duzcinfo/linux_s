@@ -51,8 +51,6 @@ Host github.com
 
 问题解决
 
-
-
 ## linux ssh 登陆失败
 
 ```shell
@@ -91,11 +89,20 @@ debug1: Local version string SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
 ssh_exchange_identification: read: Connection reset by peer
 ```
 
+#  ssh 登录不上
 
+* 目录权限问题
 
+sshd 的 目录权限一定为 755.不能是777，一一旦权限不对，系统会自检。
 
+```shell
+ubuntu@node0:~$ ll -d /var/run/sshd
+drwxr-xr-x 2 root root 40 Jan 15 11:03 /var/run/sshd/
+```
 
+* 会被忽略掉的防火墙
 
+在开启防火墙的时候，请注意查看是否开放22端口。
 
 
 
