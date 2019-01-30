@@ -89,7 +89,7 @@ debug1: Local version string SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
 ssh_exchange_identification: read: Connection reset by peer
 ```
 
-#  ssh 登录不上
+# ssh 登录不上
 
 * 目录权限问题
 
@@ -103,6 +103,25 @@ drwxr-xr-x 2 root root 40 Jan 15 11:03 /var/run/sshd/
 * 会被忽略掉的防火墙
 
 在开启防火墙的时候，请注意查看是否开放22端口。
+
+
+
+# github添加ssh
+
+```shell
+git config --global user.name "xxx"
+git config --global user.email "xxx@gmail.com"
+# 添加git账号
+ssh-keygen -t rsa -C "your_email@example.com"
+ssh-agent -s
+ssh-add
+# 如果执行ssh-add出现错误Could not open a connection to your authentication agent.
+# 执行eval `ssh-agent -s`
+再将公钥传入github上
+
+[root@host www]# ssh -T git@github.com
+Hi Duzcinfo! You've successfully authenticated, but GitHub does not provide shell access.  ##成功
+```
 
 
 
