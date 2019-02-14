@@ -104,8 +104,6 @@ drwxr-xr-x 2 root root 40 Jan 15 11:03 /var/run/sshd/
 
 在开启防火墙的时候，请注意查看是否开放22端口。
 
-
-
 # github添加ssh
 
 ```shell
