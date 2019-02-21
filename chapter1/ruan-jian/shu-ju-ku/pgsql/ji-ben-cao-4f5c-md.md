@@ -50,7 +50,7 @@ psql:zch_20181128.sql:45: ERROR:  role "yuan" does not exist
 
 * 更改数据库时区
 
-```shell
+```sql
 ALTER DATABASE gd_data_test SET timezone TO 'Asia/Chongqing';
 ```
 

@@ -27,6 +27,7 @@
       * [pgsql](chapter1/ruan-jian/shu-ju-ku/pgsql.md)
         * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/pgsql/ji-ben-cao-4f5c-md.md)
         * [创建数据库.md](chapter1/ruan-jian/shu-ju-ku/chuang-jian-shu-ju-5e93-md.md)
+        * [PG\_copy.md](chapter1/ruan-jian/shu-ju-ku/pgsql/pgcopy-md.md)
     * [端口.md](chapter1/ruan-jian/duan-53e3-md.md)
   * [ubuntu软件安装](chapter1/ubunturuan-jian-an-zhuang.md)
     * [apt安装java.md](chapter1/ubunturuan-jian-an-zhuang/aptan-zhuang-java-md.md)
