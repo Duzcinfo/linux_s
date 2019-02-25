@@ -69,5 +69,12 @@ CREATE INDEX judgedoc_companys_update_strategy_index ON public.judgedoc_companys
 \d table_name  # 查看表
 ```
 
+* 删除某个字段
+
+```sql
+ALTER TABLE public.judgedoc_companys  DROP id;
+
+```
+
 
 
