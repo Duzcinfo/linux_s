@@ -56,14 +56,15 @@ drop database [数据库名]; #删除数据库
 ```sql
 psql -U username -h hostname -p port -d dbname
 
-CREATE TABLE table_name(
-   column1 datatype,
-   column2 datatype,
-   column3 datatype,
-   .....
-   columnN datatype,
-   PRIMARY KEY( one or more columns )
-);
+CREATE TABLE public.judgedoc_companys (
+id bigserial DEFAULT nextval('judgedoc_companys_id_seq'::regclass) NOT NULL,
+company_name varchar(200) NOT NULL,
+update_strategy varchar(100) NOT NULL,
+created_at timestamp DEFAULT now(),
+updated_at timestamp DEFAULT now()
+) ;
+CREATE UNIQUE INDEX judgedoc_companys_unique_index ON public.judgedoc_companys (company_name) ;
+CREATE INDEX judgedoc_companys_update_strategy_index ON public.judgedoc_companys (update_strategy) ;
 
 \d table_name  # 查看表
 ```
