@@ -51,5 +51,20 @@ REVOKE delete ON TABLE sc_courtannouncement FROM username;
 drop database [数据库名]; #删除数据库
 ```
 
+## pg建表
+
+```sql
+psql -U username -h hostname -p port -d dbname
+
+CREATE TABLE table_name(
+   column1 datatype,
+   column2 datatype,
+   column3 datatype,
+   .....
+   columnN datatype,
+   PRIMARY KEY( one or more columns )
+); 
+```
+
 
 
