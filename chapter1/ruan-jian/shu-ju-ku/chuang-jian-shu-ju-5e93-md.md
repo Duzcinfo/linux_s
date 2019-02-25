@@ -63,7 +63,9 @@ CREATE TABLE table_name(
    .....
    columnN datatype,
    PRIMARY KEY( one or more columns )
-); 
+);
+
+\d table_name  # 查看表
 ```
 
 
