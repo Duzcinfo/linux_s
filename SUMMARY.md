@@ -16,6 +16,7 @@
     * [nginx](chapter1/ruan-jian/nginx.md)
       * [配置.md](chapter1/ruan-jian/nginx/pei-7f6e-md.md)
       * [cut\_log.sh](chapter1/ruan-jian/nginx/cutlog-sh.md)
+      * [nginx负载.md](chapter1/ruan-jian/nginx/nginxfu-8f7d-md.md)
     * [jdkinstall.md](chapter1/ruan-jian/jdkinstallmd.md)
     * [编译参数的查看.md](chapter1/ruan-jian/bian-yi-can-shu-de-cha-770b-md.md)
     * [非关系型数据库](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku.md)
