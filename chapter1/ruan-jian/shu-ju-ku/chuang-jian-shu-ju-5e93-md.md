@@ -3,6 +3,8 @@ create database  test_db;  #创建数据库
 create user test_db;  # 创建用户
 \passwd  test_db    # 设置密码
 grant all privileges on database test_db to test_db; # 授权
+
+\l #查看数据库
 ```
 
 * 给某些权限
@@ -73,7 +75,6 @@ CREATE INDEX judgedoc_companys_update_strategy_index ON public.judgedoc_companys
 
 ```sql
 ALTER TABLE public.judgedoc_companys  DROP id;
-
 ```
 
 
