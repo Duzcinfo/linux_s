@@ -16,8 +16,6 @@ grant select on table tablename to xxx;
 grant select,update,delete,insert on table bidding to wu_songgen;
 grant select,update,delete,insert on table bidding to liu_tianqi;
 
-
-
 grant select,update on table tablename1,tablename2 to xxx;  #可不可以这样？ ##grant的语法只可以对某个表授予权限
 ```
 
@@ -39,6 +37,24 @@ GRANT ALL PRIVILEGES ON DATABASE dbname TO dbuser;
 /* 撤销用户权限 */
 REVOKE privileges ON tablename FROM user;
 ```
+
+# pg 创建只读账户
+
+```sql
+创建只读账号
+CREATE USER readonly with password 'query';
+GRANT CONNECT ON DATABASE rules TO readonly; 
+然后进入到rules库，分别授权 select给需要开的表
+\c databasenae # 切换数据库
+ grant select on table t14_sc_basic_info to  readonly;
+ 
+ ##如果是给这个数据库开只读权限呢？
+ GRANT select PRIVILEGES ON DATABASE dbname TO dbuser;
+
+
+```
+
+
 
 # 回收数据库
 
