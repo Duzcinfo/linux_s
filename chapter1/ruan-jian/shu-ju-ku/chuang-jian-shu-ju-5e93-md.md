@@ -46,6 +46,7 @@ CREATE USER readonly with password 'query';
 GRANT CONNECT ON DATABASE rules TO readonly; 
 然后进入到rules库，分别授权 select给需要开的表
 \c databasenae # 切换数据库
+\c - usernaem #切换用户
  grant select on table t14_sc_basic_info to  readonly;
 
  ##如果是给这个数据库开只读权限呢？
