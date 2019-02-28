@@ -50,7 +50,12 @@ GRANT CONNECT ON DATABASE rules TO readonly;
  grant select on table t14_sc_basic_info to  readonly;
 
  ##如果是给这个数据库开只读权限呢？
- GRANT select PRIVILEGES ON DATABASE dbname TO dbuser;
+CREATE USER saic_readonly with password '1qaz2wsx'
+GRANT CONNECT ON DATABASE saic  TO saic_readonly;
+#GRANT select PRIVILEGES ON DATABASE saic TO saic_readonly;
+alter role saic_readonly set default_transaction_read_only=true;
+
+grant select on all tables in schema public to saic_readonly;
 ```
 
 # 回收数据库
