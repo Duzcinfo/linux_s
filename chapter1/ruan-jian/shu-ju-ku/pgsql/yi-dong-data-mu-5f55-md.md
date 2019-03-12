@@ -32,13 +32,14 @@ cat /etc/postgresql/9.6/main/postgresql.conf | grep data_directory
 ```shell
 sudo systemctl stop postgres
 ```
- 
- 2. 移动数据
- 
- ```shell
- sudo rsync -av /var/lib/postgresql /mnt/new_volume
- ```
- 3. 
- qq
 
+1. 移动数据
+
+   ```shell
+   sudo rsync -av /var/lib/postgresql /mnt/new_volume
+   ```
+
+2. qq
+
+22w
 
