@@ -39,6 +39,6 @@ sudo systemctl stop postgres
  sudo rsync -av /var/lib/postgresql /mnt/new_volume
  ```
  3. 
- 
+ qq
 
 
