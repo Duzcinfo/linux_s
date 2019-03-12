@@ -35,10 +35,34 @@ sudo systemctl stop postgres
 
 1. 移动数据
 
-   ```shell
-   sudo rsync -av /var/lib/postgresql /mnt/new_volume
-   ```
+```shell
+sudo rsync -av /var/lib/postgresql /mnt/new_volume
+```
 
-2. 
+1. 修改pg的配置文件
 
+```shell
+vim /etc/postgresql/9.6/main/postgresql.conf
+/mnt/new_volume/postgresql/9.6/main
+```
+
+1. 启动服务
+
+```shell
+sudo systemctl start postgres
+```
+
+问题： 用以上的方式，最后在启动的时候，pg服务是处于active状态，但是pg的端口5432是没有起来的。这个原因，不知道出在哪里，没有日志产生。
+
+**另外一篇文档：**
+
+[pg移动data目录文档2](https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04)
+
+Once the copy is complete, we'll rename the current folder with a .bak extension and keep it until we’ve confirmed the move was successful. By re-naming it, **we’ll avoid confusion that could arise from files in both the new and the old location**:
+
+```shell
+sudo mv /var/lib/postgresql/9.5/main /var/lib/postgresql/9.5/main.bak
+```
+
+然后，pg竟然可以启动服务了。文档一和文档二唯一的区别在于mv这一步，一个没有这个步骤，一个有这个步骤。
 
