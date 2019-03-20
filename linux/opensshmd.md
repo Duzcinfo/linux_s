@@ -121,8 +121,6 @@ ssh-add
 Hi Duzcinfo! You've successfully authenticated, but GitHub does not provide shell access.  ##成功
 ```
 
-
-
 ## 限制服务器登录
 
 只允许某个组的用户登录服务器
@@ -162,8 +160,8 @@ StrictModes no
 
 RSAAuthentication yes
 PubkeyAuthentication yes
-#AuthorizedKeysFile	.ssh/authorized_keys
-AuthorizedKeysFile	%h/.ssh/authorized_keys
+#AuthorizedKeysFile    .ssh/authorized_keys
+AuthorizedKeysFile    %h/.ssh/authorized_keys
 
 # Don't read the user's ~/.rhosts and ~/.shosts files
 IgnoreRhosts yes
@@ -220,7 +218,6 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 AllowGroups sc
-
 ```
 
 
