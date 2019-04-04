@@ -53,6 +53,8 @@ sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 date -R
 Wed, 23 Jan 2019 14:19:53 +0800
 # 更改成功
+
+sudo hwclock  -w   # 写入bios  ，重启不失效
 ```
 
 
