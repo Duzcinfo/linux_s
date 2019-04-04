@@ -43,12 +43,13 @@ REVOKE privileges ON tablename FROM user;
 ```sql
 创建只读账号
 CREATE USER readonly with password 'query';
-GRANT CONNECT ON DATABASE rules TO readonly; 
+GRANT CONNECT ON DATABASE rules TO readonly;    #### 授权需要该表的owner才行
 然后进入到rules库，分别授权 select给需要开的表
 \c databasenae # 切换数据库
 \c - usernaem #切换用户
  grant select on table t14_sc_basic_info to  readonly;
-
+ grant select on table t14_sc_basic_info,tablesname2  to readonly;  #可以批量授权的
+  
  ##如果是给这个数据库开只读权限呢？
 CREATE USER saic_readonly with password '1qaz2wsx'
 GRANT CONNECT ON DATABASE saic  TO saic_readonly;
@@ -56,6 +57,10 @@ GRANT CONNECT ON DATABASE saic  TO saic_readonly;
 alter role saic_readonly set default_transaction_read_only=true;
 
 grant select on all tables in schema public to saic_readonly;
+
+
+
+
 ```
 
 # 回收数据库
