@@ -59,7 +59,6 @@ docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable
 docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable 
 #安装指定版本
 yum install docker-ce-<VERSION>
-
 ```
 
 # hexo博客
@@ -78,8 +77,22 @@ docker run -dt --name ss -p 6443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -
 ```
 
 # nginx
+[nginx-docker仓库](https://hub.docker.com/_/nginx)
+docker pull nginx
+* nginx.sh
+```shell
+#!/bin/bash
+docker run --name nginx \
+  -v $PWD/conf.d/:/etc/nginx/conf.d/ \
+  -v /var/log/nginx:/var/log/nginx\
+  -v $PWD/www:/usr/share/nginx/html \
+  -p 8080:80 \
+  -d nginx
+```
+
 # rap2 
 # jenkins
 # postgresql
 # python虚拟环境 
+
 

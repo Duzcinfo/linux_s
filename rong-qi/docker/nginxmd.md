@@ -15,8 +15,8 @@ docker pull nignx
     -p 8001:8001\
     -v /usr/nginx/conf.d:/etc/nginx/conf.d\       #将docker容器的配置文件挂载出来
     -d nginx
-    
-    
+
+
     #或
     docker run  --log-driver=gelf --log-opt gelf-address=udp://**.**.**.**:12201 \
 --restart=always \
@@ -25,7 +25,6 @@ docker pull nignx
 -p 18091:18091 \
 -v /opt/test/conf.d:/etc/nginx/conf.d \
 -d nginx
-
 ```
 
 配置文件  `default.conf`
