@@ -94,5 +94,39 @@ docker run --name nginx \
 # jenkins
 # postgresql
 # python虚拟环境 
+## pyenv
+```shell
+git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+
+vim ~/.bash_profile
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+* 用法
+
+```shell
+   commands    List all available pyenv commands
+   local       Set or show the local application-specific Python version
+   global      Set or show the global Python version
+   shell       Set or show the shell-specific Python version
+   install     Install a Python version using python-build
+   uninstall   Uninstall a specific Python version
+   rehash      Rehash pyenv shims (run this after installing executables)
+   version     Show the current Python version and its origin
+   versions    List all Python versions available to pyenv
+   which       Display the full path to an executable
+   whence      List all Python versions that contain the given executable
+```
+
+## 插件
+
+```shell
+git clone git://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+exec $SHELL # 重新加入配置
+ 
+ ```
+ 
+
 
 
