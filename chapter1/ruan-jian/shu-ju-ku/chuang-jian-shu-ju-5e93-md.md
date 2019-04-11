@@ -100,5 +100,13 @@ CREATE INDEX judgedoc_companys_update_strategy_index ON public.judgedoc_companys
 ALTER TABLE public.judgedoc_companys  DROP id;
 ```
 
+* 限制索引
+登录改数据库的own，修改。
+```sql
+alter role sccj_monitor_prod set enable_seqscan =off;  
+
+```
+
+
 
 
