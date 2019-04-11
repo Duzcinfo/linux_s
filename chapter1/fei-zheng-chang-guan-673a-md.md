@@ -26,3 +26,7 @@ jiangong pts/1        172.16.8.159     Mon Apr  1 09:29 - 20:02  (10:33)
 `sudo dump-utmp  btmp` 查看 last信息
 
 安装该命令 : `sudo apt install acct`
+
+正常命令重启显示为down，而电源强制重启为crash
+
+![](/assets/last_sys.png)
