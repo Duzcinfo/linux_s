@@ -57,5 +57,11 @@ Wed, 23 Jan 2019 14:19:53 +0800
 sudo hwclock  -w   # 写入bios  ，重启不失效
 ```
 
+**bug**：用上面更改时间的方法，java程序无法读出系统的正确时间
+
+用亚马逊提供的修改时间的f方法（chorny）也不行。
+
+但用 : `dpkg - reconfig tdata` 就可以了。
+ 
 
 
