@@ -60,9 +60,20 @@ sudo hwclock  -w   # 写入bios  ，重启不失效
 **bug**：用上面更改时间的方法，java程序无法读出系统的正确时间
 
 用亚马逊提供的修改时间的方法[chrony ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html )也不行。
- 
-但用 :` sudo dpkg-reconfigure tzdata` 就可以
+
+但用 :`sudo dpkg-reconfigure tzdata` 就可以  
  `sudo dpkg-reconfigure locales`  扩展一下，修改语言
- 
+
+## 手动更改时间
+
+```shell
+sudo date -s MM/DD/YY //修改日期
+sudo date -s hh:mm:ss //修改时间
+
+sudo hwclock --systohc //非常重要，如果没有这一步的话，后面时间还是不准  #在修改时间以后，修改硬件CMOS的时间
+```
+
+
+
 
 
