@@ -73,5 +73,7 @@ sudo date -s hh:mm:ss //修改时间
 sudo hwclock --systohc //非常重要，如果没有这一步的话，后面时间还是不准  #在修改时间以后，修改硬件CMOS的时间
 ```
 
+ubuntu字符集
 
+dpkg-reconfigure --force locales 
 
