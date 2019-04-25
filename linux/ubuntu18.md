@@ -81,5 +81,53 @@ $ sudo systemctl disable systemd-networkd-wait-online.service
 
 # kvm虚拟化
 
+```shell
+userroot@ubuntu:~$ Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(virt-manager:11101): Gtk-WARNING **: 05:42:18.976: cannot open display: 
+```
+`egrep -c '(vmx|svm)' /proc/cpuinfo`   大于0，硬件支持虚拟化 
+
+```shell
+ sudo apt install --no-install-recommends ubuntu-desktop
+ sudo apt install qemu qemu-kvm libvirt-bin bridge-utils virt-manager virtinst cpu-checker 
+```
+[root@localhost ~]# systemctl enable libvirtd
+[root@localhost ~]# systemctl start libvirtd
+
+
+
+
+出现error错误：
+解决办法，添加源
+源：
+deb http://archive.ubuntu.com/ubuntu bionic main universe restricted multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-security main universe restricted multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-updates main universe restricted multiverse
+
+
+
+
+
+```yml
+network:
+    ethernets:
+        enp103s0f0:
+            dhcp4: no
+    bridges:
+            br0:
+                    interfaces: [enp103s0f0]
+                    dhcp4: no
+                    addresses: [192.168.21.3/24]
+                    gateway4: 192.168.21.1
+                    nameservers:
+                            addresses: [61.128.128.68]
+
+    version: 2
+```
+
+
 
 
