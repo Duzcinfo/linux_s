@@ -37,6 +37,7 @@
     * [ubuntu18\_network.md](chapter1/ubunturuan-jian-an-zhuang/ubuntu18network-md.md)
   * [非正常关机.md](chapter1/fei-zheng-chang-guan-673a-md.md)
   * [修改linux系统的时间.md](chapter1/xiu-gai-linux-xi-tong-de-shi-95f4-md.md)
+  * [ubuntu离线安装问题集.md](chapter1/ubuntuli-xian-an-zhuang-wen-ti-96c6-md.md)
 * [shell](shell.md)
 * [linux](linux.md)
   * [SSl.md](linux/sslmd.md)
