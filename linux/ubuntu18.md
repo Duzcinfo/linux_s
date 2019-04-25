@@ -30,6 +30,54 @@ $ sudo systemctl disable systemd-networkd-wait-online.service
  或
 /lib/systemd/system/NetworkManager-wait-online.service
 ```
+## 网络
+已经安装了kvm的网络配置
+```yaml
+  bridges:
+	br0:
+	  interfaces: [enp103s0f0]
+	  dhcp4: no
+	  addresses: [172.30.10.102/24]
+	  gateway4: 172.30.10.1
+	  nameservers:
+		addresses: [61.128.128.68]
+        
+        
+        
+        
+        
+        network:
+    ethernets:
+        enp103s0f0:
+            addresses: [172.30.10.101/24]
+            dhcp4: no
+            gateway4: 172.30.10.1
+        enp103s0f1:
+            addresses: []
+            dhcp4: true
+            optional: true
+        enp103s0f2:
+            addresses: []
+            dhcp4: true
+            optional: true
+        enp103s0f3:
+            addresses: []
+            dhcp4: true
+            optional: true
+        bridges:
+                br0:
+                interfaces: [enp103s0f0]
+                dhcp4: no
+                addresses: [172.30.10.102/24]
+                gateway4: 172.30.10.1
+                nameservers:
+                addresses: [61.128.128.68]
+
+
+    version: 2
+
+```
+
 
 # kvm虚拟化
 
