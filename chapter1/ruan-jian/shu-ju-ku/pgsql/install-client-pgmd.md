@@ -31,6 +31,8 @@ sudo apt  install postgresql-client-9.5
 ## 安装deb包
 [deb包下载](https://packages.ubuntu.com/xenial/all/postgresql-client-common/download)
 
+sudo dpkg -i name.deb
+ 
 
 
 
