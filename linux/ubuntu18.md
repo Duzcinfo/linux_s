@@ -30,22 +30,25 @@ $ sudo systemctl disable systemd-networkd-wait-online.service
  或
 /lib/systemd/system/NetworkManager-wait-online.service
 ```
+
 ## 网络
+
 已经安装了kvm的网络配置
+
 ```yaml
   bridges:
-	br0:
-	  interfaces: [enp103s0f0]
-	  dhcp4: no
-	  addresses: [172.30.10.102/24]
-	  gateway4: 172.30.10.1
-	  nameservers:
-		addresses: [61.128.128.68]
-        
-        
-        
-        
-        
+    br0:
+      interfaces: [enp103s0f0]
+      dhcp4: no
+      addresses: [172.30.10.102/24]
+      gateway4: 172.30.10.1
+      nameservers:
+        addresses: [61.128.128.68]
+
+
+
+
+
         network:
     ethernets:
         enp103s0f0:
@@ -75,9 +78,7 @@ $ sudo systemctl disable systemd-networkd-wait-online.service
 
 
     version: 2
-
 ```
-
 
 # kvm虚拟化
 
@@ -86,30 +87,25 @@ userroot@ubuntu:~$ Unable to init server: Could not connect: Connection refused
 Unable to init server: Could not connect: Connection refused
 Unable to init server: Could not connect: Connection refused
 
-(virt-manager:11101): Gtk-WARNING **: 05:42:18.976: cannot open display: 
+(virt-manager:11101): Gtk-WARNING **: 05:42:18.976: cannot open display:
 ```
-`egrep -c '(vmx|svm)' /proc/cpuinfo`   大于0，硬件支持虚拟化 
+
+`egrep -c '(vmx|svm)' /proc/cpuinfo`   大于0，硬件支持虚拟化
 
 ```shell
  sudo apt install --no-install-recommends ubuntu-desktop
- sudo apt install qemu qemu-kvm libvirt-bin bridge-utils virt-manager virtinst cpu-checker 
+ sudo apt install qemu qemu-kvm libvirt-bin bridge-utils virt-manager virtinst cpu-checker
 ```
-[root@localhost ~]# systemctl enable libvirtd
-[root@localhost ~]# systemctl start libvirtd
 
+\[root@localhost ~\]\# systemctl enable libvirtd  
+\[root@localhost ~\]\# systemctl start libvirtd
 
-
-
-出现error错误：
-解决办法，添加源
-源：
-deb http://archive.ubuntu.com/ubuntu bionic main universe restricted multiverse
-deb http://archive.ubuntu.com/ubuntu bionic-security main universe restricted multiverse
-deb http://archive.ubuntu.com/ubuntu bionic-updates main universe restricted multiverse
-
-
-
-
+出现error错误：  
+解决办法，添加源  
+源：  
+deb [http://archive.ubuntu.com/ubuntu](http://archive.ubuntu.com/ubuntu) bionic main universe restricted multiverse  
+deb [http://archive.ubuntu.com/ubuntu](http://archive.ubuntu.com/ubuntu) bionic-security main universe restricted multiverse  
+deb [http://archive.ubuntu.com/ubuntu](http://archive.ubuntu.com/ubuntu) bionic-updates main universe restricted multiverse
 
 ```yml
 network:
@@ -127,7 +123,6 @@ network:
 
     version: 2
 ```
-
 
 
 
