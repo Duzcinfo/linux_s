@@ -18,22 +18,21 @@ postgresql-client-9.5/xenial-updates,xenial-security 9.5.14-0ubuntu0.16.04 amd64
 
 postgresql-client-common/xenial-updates,now 173ubuntu0.2 all [installed]
   manager for multiple PostgreSQL client versions
-
-
 ```
+
 * 安装
 
 ```shell
 sudo apt  install postgresql-client-9.5
-
 ```
 
+[客户端](https://www.postgresql.org/download/linux/ubuntu/)
+
+## 
+
 ## 安装deb包
+
 [deb包下载](https://packages.ubuntu.com/xenial/all/postgresql-client-common/download)
 
 sudo dpkg -i name.deb
- 
-
-
-
 
