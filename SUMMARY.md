@@ -1,6 +1,6 @@
 # Summary
 
-* [数据库](README.md)
+* [点滴笔记](README.md)
 * [关系型数据库](chapter1/ruan-jian/shu-ju-ku.md)
   * [mysql](chapter1/ruan-jian/shu-ju-ku/mysql.md)
     * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/mysql/ji-ben-cao-zuo.md)
