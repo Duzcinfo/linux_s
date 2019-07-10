@@ -48,6 +48,7 @@
 * [容器](rong-qi.md)
   * [docker](rong-qi/docker.md)
     * [nginx.md](rong-qi/docker/nginxmd.md)
+    * [安装.md](rong-qi/docker/an-88c5-md.md)
 * [myserver](myserver.md)
   * [服务搭建.md](myserver/fu-wu-da-5efa-md.md)
 * [works](works.md)
