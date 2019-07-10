@@ -2,6 +2,7 @@
 
 * [点滴笔记](README.md)
 * [elasticsearch数据库](elasticsearchshu-ju-ku.md)
+  * [安装.md](elasticsearchshu-ju-ku/an-88c5-md.md)
 * [关系型数据库](chapter1/ruan-jian/shu-ju-ku.md)
   * [mysql](chapter1/ruan-jian/shu-ju-ku/mysql.md)
     * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/mysql/ji-ben-cao-zuo.md)
