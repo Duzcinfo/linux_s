@@ -16,6 +16,7 @@
     * [PG\_copy.md](chapter1/ruan-jian/shu-ju-ku/pgsql/pgcopy-md.md)
     * [移动data目录.md](chapter1/ruan-jian/shu-ju-ku/pgsql/yi-dong-data-mu-5f55-md.md)
     * [install-client-pg.md](chapter1/ruan-jian/shu-ju-ku/pgsql/install-client-pgmd.md)
+    * update\_pg\_11.4.md
   * [基本操作](chapter1/ruan-jian/shu-ju-ku/mysql/ji-ben-cao-zuo.md)
 * [非关系型数据库](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku.md)
   * [mongodb](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku/mongodb.md)
