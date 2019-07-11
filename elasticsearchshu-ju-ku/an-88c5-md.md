@@ -56,9 +56,7 @@ GET _cluster/heath #健康检查
 /_cat/repositories
 /_cat/snapshots/{repository}
 /_cat/templates
-
-
 ```
 
-
+1
 
