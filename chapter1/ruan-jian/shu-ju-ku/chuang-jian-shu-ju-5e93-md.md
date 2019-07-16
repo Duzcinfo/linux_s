@@ -49,7 +49,7 @@ GRANT CONNECT ON DATABASE rules TO readonly;    #### 授权需要该表的owner�
 \c - usernaem #切换用户
  grant select on table t14_sc_basic_info to  readonly;
  grant select on table t14_sc_basic_info,tablesname2  to readonly;  #可以批量授权的
-  
+
  ##如果是给这个数据库开只读权限呢？
 CREATE USER saic_readonly with password '1qaz2wsx'
 GRANT CONNECT ON DATABASE saic  TO saic_readonly;
@@ -57,10 +57,6 @@ GRANT CONNECT ON DATABASE saic  TO saic_readonly;
 alter role saic_readonly set default_transaction_read_only=true;
 
 grant select on all tables in schema public to saic_readonly;
-
-
-
-
 ```
 
 # 回收数据库
@@ -101,12 +97,13 @@ ALTER TABLE public.judgedoc_companys  DROP id;
 ```
 
 * 限制索引
-登录改数据库的own，修改。
-```sql
-alter role sccj_monitor_prod set enable_seqscan =off;  
-
-```
+  登录改数据库的own，修改。
 
 
 
+\`\`\`sql
+
+alter role sccj\_monitor\_prod set enable\_seqscan =off;  
+
+   \`\`\`
 
