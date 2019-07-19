@@ -45,10 +45,6 @@ awk 'BEGIN {FS = ":"; OFS = "**"}
  {print $1,$5}'   /etc/passwd
 ```
 
-
-
-                                               
-
 # grep
 
 
