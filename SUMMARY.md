@@ -18,6 +18,8 @@
 * [非关系型数据库](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku.md)
   * [mongodb](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku/mongodb.md)
     * [基本操作.md](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku/mongodb/ji-ben-cao-4f5c-md.md)
+  * redis
+    * [redis.md](chapter1/ruan-jian/shu-ju-ku/guan-xi-xing-shu-ju-ku/redismd.md)
 * [linux系统](chapter1.md)
   * [硬件](chapter1/ying-jian.md)
     * [清除缓存](chapter1/ying-jian/qing-chu-huan-cun.md)
