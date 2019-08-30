@@ -2,9 +2,11 @@
 date: 2017.10.15
 ---
 
+# 配置.md
+
 fastcgi.conf
 
-```shell
+```text
 fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 fastcgi_param  QUERY_STRING       $query_string;
 fastcgi_param  REQUEST_METHOD     $request_method;
@@ -33,11 +35,11 @@ fastcgi_param  REDIRECT_STATUS    200;
 
 > 在vhost文件，`location ~ .*\.(php|php5)?$`末尾加上`include fcgi.conf`
 
-# 优化内核参数
+## 优化内核参数
 
 * vim /etc/sysctl.conf
 
-```shell
+```text
 # Kernel sysctl configuration file for Red Hat Linux
 #
 # For binary values, 0 is disabled, 1 is enabled.  See sysctl(8) and
@@ -92,7 +94,7 @@ net.ipv4.conf.lo.arp_announce=2
 
 * 防ddos
 
-```shell
+```text
 ##自定义
 
   #0表示禁用,1表示启用,表示开启SYN Cookies,当SYN等待队列溢出时,启用cookies来处理,可以防范少量的SYN攻击,默认为0,表示关闭
@@ -114,7 +116,7 @@ net.ipv4.conf.lo.arp_announce=2
 
 * 提升并发
 
-```shell
+```text
   #设置TCP 发送keepalive的频度,默认的缺省为2小时,1200秒表示20分钟,表示服务器以20分钟发送keepalive消息
 
    net.ipv4.tcp_keepalive_time = 1200
@@ -177,6 +179,4 @@ net.ipv4.conf.lo.arp_announce=2
   #设置tcp fin状态的超时时间为120秒,超过该时间自动关闭
     net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
 ```
-
-
 

@@ -1,32 +1,38 @@
 ---
 title: banwagong
-sys: centos7 
+sys: centos7
 ---
 
-# 系统初始化
-# 需要的服务
-# git 
-# docker服务
+# 服务搭建.md
+
+## 系统初始化
+
+## 需要的服务
+
+## git
+
+## docker服务
+
 [docker文档](https://docs.docker-cn.com/engine/installation/)
+
 * 安装
 
-```shell
+```text
 yum install -y yum-utils device-mapper-persistent-data lvm2 #安装所需的软件包。
 yum-config-manager \
      --add-repo \
      https://download.docker.com/linux/centos/docker-ce.repo
      #使用下列命令设置 stable 镜像仓库。
-     
+
 yum makecache fast # 更新yum软件包
 yum install docker-ce  # 安装
 
 systemctl start docker #启动docker
-
-
 ```
-**注意**：此 yum list 命令仅显示二进制软件包。如果还需要显示 源软件包，请从软件包名称中省略 .x86_64
 
-```shell
+**注意**：此 yum list 命令仅显示二进制软件包。如果还需要显示 源软件包，请从软件包名称中省略 .x86\_64
+
+```text
 [root@localhost ~]# yum list docker-ce.x86_64  --showduplicates | sort -r
  * updates: mirror.jaleco.com
 Loading mirror speeds from cached hostfile
@@ -61,12 +67,15 @@ docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable
 yum install docker-ce-<VERSION>
 ```
 
-# hexo博客
-# shadowsocks（docker安装）
+## hexo博客
+
+## shadowsocks（docker安装）
+
 docker：docker pull oddrationale/docker-shadowsocks
 
-## docker运行命令
-```shell
+### docker运行命令
+
+```text
 docker run -dt --name ss -p 6443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k test123"
 -m : 指定 shadowsocks 命令，默认为 ss-server
 -s : shadowsocks-libev 参数字符串
@@ -76,26 +85,33 @@ docker run -dt --name ss -p 6443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -
 -r : 使用 /dev/urandom 来生成随机数
 ```
 
-# nginx
-[nginx-docker仓库](https://hub.docker.com/_/nginx)
-docker pull nginx
+## nginx
+
+[nginx-docker仓库](https://hub.docker.com/_/nginx) docker pull nginx
+
 * nginx.sh
-```shell
-#!/bin/bash
-docker run --name nginx \
+
+  ```text
+  #!/bin/bash
+  docker run --name nginx \
   -v $PWD/conf.d/:/etc/nginx/conf.d/ \
   -v /var/log/nginx:/var/log/nginx\
   -v $PWD/www:/usr/share/nginx/html \
   -p 8080:80 \
   -d nginx
-```
+  ```
 
-# rap2 
-# jenkins
-# postgresql
-# python虚拟环境 
-## pyenv
-```shell
+## rap2
+
+## jenkins
+
+## postgresql
+
+## python虚拟环境
+
+### pyenv
+
+```text
 git clone git://github.com/yyuu/pyenv.git ~/.pyenv
 
 vim ~/.bash_profile
@@ -103,9 +119,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 ```
+
 * 用法
 
-```shell
+```text
    commands    List all available pyenv commands
    local       Set or show the local application-specific Python version
    global      Set or show the global Python version
@@ -119,14 +136,10 @@ eval "$(pyenv init -)"
    whence      List all Python versions that contain the given executable
 ```
 
-## 插件
+### 插件
 
-```shell
+```text
 git clone git://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 exec $SHELL # 重新加入配置
- 
- ```
- 
-
-
+```
 

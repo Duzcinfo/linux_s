@@ -1,9 +1,10 @@
-# mysqldump
+# 问题及解决.md
 
 * 问题描述
+
   在linux命令行数据库备份时，报`Out of resources when opening file`错误。
 
-```shell
+```text
  mysqldump -uroot -ppasswd --databases dbname  > /tmp/20171018_xy.sql                    
 mysqldump: Got error: 23: Out of resources when opening file './xiangyu/xy_user_meet_sum_20170410_9.MYD' (Errcode: 24) when using LOCK TABLES
 ```
@@ -14,12 +15,12 @@ mysqldump: Got error: 23: Out of resources when opening file './xiangyu/xy_user_
 
 查看系统打开文件的数目：
 
-```
+```text
 # ulimit -n  
     65535
 ```
 
-```shell
+```text
  open_files_limit = 65535 # 如果没有请加上这句配置
 ```
 
@@ -27,7 +28,7 @@ mysqldump: Got error: 23: Out of resources when opening file './xiangyu/xy_user_
 
 查看mysql打开文件的状态：
 
-```mysql
+```text
 mysql> show global variables like 'open%';
 +------------------+-------+
 | Variable_name    | Value |
@@ -39,7 +40,7 @@ mysql> show global variables like 'open%';
 
 * 解决办法2：
 
-```shell
+```text
 # 非锁表方式导出数据，不影响原表写入
  mysqldump -uroot -ppasswd --databases dbname --lock-tables=false  > /tmp/20171013_xy.sql
 
@@ -57,6 +58,4 @@ mysqldump --skip-opt   -h    -u  -p  databasename tablename  --lock-table=false 
  5、带条件导出数据
 mysqldump --skip-opt   -h    -u  -p  databasename tablename  --lock-table=false  -w"status=3 and createtime < '2013-12-01'" > xx.sql
 ```
-
-
 

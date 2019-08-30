@@ -1,10 +1,12 @@
-## 服务器端
+# openSSH.md
+
+### 服务器端
 
 * 基于秘钥
 
 1.生成一对秘钥
 
-```shell
+```text
 ssh-keygen 
 
 ssh-copy-id "root@host"
@@ -20,20 +22,20 @@ ssh-copy-id "root@host"
 
 * 目录
 
-```shell
+```text
 /etc/sh
 
 ssh (ssh_config)#客户端
 sshd(sshd_config)#服务端
 ```
 
-# gitlab 使用ssh登陆
+## gitlab 使用ssh登陆
 
 使用gitlab ssh 登陆，添加ssh ，在使用时，可以 pul ，但是 push 会报错误：
 
-![](/assets/ssh-git.png)
+![](../.gitbook/assets/ssh-git%20%281%29.png)
 
-```shell
+```text
 解决方法：
 
 在.ssh目录下，创建的 config 文件，更改一下内容：
@@ -51,15 +53,15 @@ Host github.com
 
 问题解决
 
-## linux ssh 登陆失败
+### linux ssh 登陆失败
 
-```shell
+```text
 ssh_exchange_identification: read: Connection reset by peer
 ```
 
 * 调试模式
 
-```shell
+```text
 ubuntu@ubuntu-31-59:~$ ssh root@192.168.31.55 -vvv
 OpenSSH_7.2p2 Ubuntu-4ubuntu2.6, OpenSSL 1.0.2g  1 Mar 2016
 debug1: Reading configuration data /etc/ssh/ssh_config
@@ -89,13 +91,13 @@ debug1: Local version string SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
 ssh_exchange_identification: read: Connection reset by peer
 ```
 
-# ssh 登录不上
+## ssh 登录不上
 
 * 目录权限问题
 
 sshd 的 目录权限一定为 755.不能是777，一一旦权限不对，系统会自检。
 
-```shell
+```text
 ubuntu@node0:~$ ll -d /var/run/sshd
 drwxr-xr-x 2 root root 40 Jan 15 11:03 /var/run/sshd/
 ```
@@ -104,9 +106,9 @@ drwxr-xr-x 2 root root 40 Jan 15 11:03 /var/run/sshd/
 
 在开启防火墙的时候，请注意查看是否开放22端口。
 
-# github添加ssh
+## github添加ssh
 
-```shell
+```text
 git config --global user.name "xxx"
 git config --global user.email "xxx@gmail.com"
 # 添加git账号
@@ -121,13 +123,13 @@ ssh-add
 Hi Duzcinfo! You've successfully authenticated, but GitHub does not provide shell access.  ##成功
 ```
 
-## 限制服务器登录
+### 限制服务器登录
 
 只允许某个组的用户登录服务器
 
 * sshd\_config文件
 
-```shell
+```text
 # Package generated configuration file
 # See the sshd_config(5) manpage for details
 
@@ -219,6 +221,4 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM yes
 AllowGroups sc
 ```
-
-
 

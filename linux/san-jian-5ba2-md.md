@@ -1,24 +1,26 @@
-# sed
+# 查找与替换.md
+
+## sed
 
 在shell大多数时用替换功能。
 
-# cut
+## cut
 
 -d 分割符
 
-```cut
+```text
 cut -d: -f5 /etc/passwd
 ```
 
-# join
+## join
 
-# awk
+## awk
 
 > 默认以空白字段为分割符。
 >
 > "print"字段要以逗号隔开，否者各个字段连在一起。
 
-```awk
+```text
 awk '{print $1 ,$NF}' #    NF:内建变量.打印第一个字段与最后一个字段。其中当自段为0时，表示整条记录。
 #格式
 awk -F: '{print $1,$5}' /etc/passwd  
@@ -39,13 +41,11 @@ User root is realy System Administrator
 
 * BEGIN  与 END
 
-```awk
+```text
 awk 'BEGIN {FS = ":"; OFS = "**"}
 
  {print $1,$5}'   /etc/passwd
 ```
 
-# grep
-
-
+## grep
 

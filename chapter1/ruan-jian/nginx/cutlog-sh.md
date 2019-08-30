@@ -2,9 +2,11 @@
 details: nginx日志切割脚本
 ---
 
+# cut\_log.sh
+
 > nginx 日志切割脚本
 
-```shell
+```text
 #!/bin/bash
 # this script run at 00:00.
 # The nginx logs path
@@ -17,7 +19,7 @@ mv ${Logs_path}access.log  ${Logs_path}/${Years}/${Mounth}/access_$(date -d "yes
 kill -USR1 `path/nginx.pid`
 ```
 
-```shell
+```text
 #!/bin/bash
 pid=`cat /usr/local/nginx/logs/nginx.pid`
 d=`date -d "-1 day" +%Y%m%d`
@@ -28,9 +30,7 @@ gzip -f /tmp/$d.log
 
 将脚本放入`crontab`
 
-```shell
+```text
 00 00 * * * /bin/bash   /usr/local/sbin/nginx_logrotate.sh
 ```
-
-
 

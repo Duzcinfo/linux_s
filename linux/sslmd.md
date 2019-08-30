@@ -1,3 +1,5 @@
+# SSl.md
+
 公钥加密算法很少加密数据：速度太慢
 
 名词解释：
@@ -15,21 +17,21 @@ PKI：OPenGPG
 
 TLS/SSL handshake
 
-SSL：Secure Socket Layer安全套接字层。是一个库    SSLv2  SSLv3
+SSL：Secure Socket Layer安全套接字层。是一个库 SSLv2 SSLv3
 
 TLS：Transport Layer Secure
 
-# 对称加密
+## 对称加密
 
 DES：Data Encrption Standard\( 数据加密标准\),56bit
 
 **3DES**
 
-AES :高级加密标准  AES192 AES256 AES512   **越长安全越高，速度越慢**
+AES :高级加密标准 AES192 AES256 AES512 **越长安全越高，速度越慢**
 
 Blowfish
 
-## 单向加密
+### 单向加密
 
 MD4
 
@@ -45,15 +47,15 @@ CRC-32:校验码机制，不提供安全性。
 
 OpenSSl：ssl的开源实现
 
-```shell
+```text
 libcrypto:通用加密库
 libssl：TLS/SSl的实现。基于会话，实现了身份认证、数据机密性和会话完整性的库。
 openssl：多用途命令行工具。实现私有证书颁发机构。
 ```
 
-### openssl介绍
+#### openssl介绍
 
-```shell
+```text
 openssl speed #速度测试工具
 openssl enc -des3 -salt -a -in pathfile -out newname   #des3加密
 openssl enc -d des3 -d -salt -a in newname -out pathfilename    #des3解密
@@ -63,7 +65,7 @@ openssl enc -d des3 -d -salt -a in newname -out pathfilename    #des3解密
 * 生成一对秘钥   \(权限600\)
 * 生成自签证书
 
-```shell
+```text
 genrsa 2048  > filename ##默认512
 genrsa 2048 -out filename 
 (umask 077)  #在子shell执行
@@ -74,7 +76,7 @@ openssl rsa -in server1024.key -pubout ##提取公钥
 
 自签签名
 
-```shell
+```text
 openssl req -new -x509 -key server1024.key -out server.crt -days 365
 
 openssl x509 -text -in server.crt #输出crt文件
@@ -141,20 +143,17 @@ PMLLwuxxyyVcNvcykFBB8w==
 -----END CERTIFICATE-----
 ```
 
-## 
+红帽系列还需配置`/etc/pki/tls/openssl.cnf`---&gt;\[CA\_default\]
 
-红帽系列还需配置`/etc/pki/tls/openssl.cnf                     `--->[CA_default]
+ubuntu `/etc/ssl/openssl.cnf` --&gt;\[CA\_default\] CA目录下的文件：
 
-ubuntu `/etc/ssl/openssl.cnf` -->[CA_default]
-CA目录下的文件：
-```shell
+```text
 dir:certs newcerts crl
 text:index.txt serial
-echo 01 > serial  
+echo 01 > serial
 ```
 
-
-## 非对称加密（公钥加密）
+### 非对称加密（公钥加密）
 
 > 作用：加密和签名
 
@@ -168,7 +167,7 @@ DSA：签名
 
 ElGamal:
 
-### 工具
+#### 工具
 
 rsautl
 

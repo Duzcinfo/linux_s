@@ -1,14 +1,14 @@
-# docker ngixn
+# nginx.md
 
 * pull
 
-```shell
+```text
 docker pull nignx
 ```
 
 * run
 
-```shell
+```text
  docker run \
     --name nginx\
     -p 80:80 \
@@ -27,9 +27,9 @@ docker pull nignx
 -d nginx
 ```
 
-配置文件  `default.conf`
+配置文件 `default.conf`
 
-```shell
+```text
 upstream duzc{
 server 104.224.162.46;
 
@@ -62,6 +62,4 @@ server {
 
 ##这样做行不通，因为 把 url也带过去了，而代理过去的是没有这个url的，除非代理后的url有这个地址。
 ```
-
-
 

@@ -1,11 +1,10 @@
-
----
+# 修改linux系统的时间.md
 
 > 环境：ubuntu
 
 使用nptdate 时间服务器，但是时间依然没有更改。于是更改想到更改时区。
 
-```shell
+```text
 date -R 
 Wed, 23 Jan 2019 06:19:08 +0000
 # 修改时区
@@ -59,14 +58,14 @@ sudo hwclock  -w   # 写入bios  ，重启不失效
 
 **bug**：用上面更改时间的方法，java程序无法读出系统的正确时间
 
-用亚马逊提供的修改时间的方法[chrony ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html )也不行。
+用亚马逊提供的修改时间的方法[chrony ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html%20)也不行。
 
 但用 :`sudo dpkg-reconfigure tzdata` 就可以  
- `sudo dpkg-reconfigure locales`  扩展一下，修改语言
+`sudo dpkg-reconfigure locales` 扩展一下，修改语言
 
 ## 手动更改时间
 
-```shell
+```text
 sudo date -s MM/DD/YY //修改日期
 sudo date -s hh:mm:ss //修改时间
 
@@ -75,5 +74,5 @@ sudo hwclock --systohc //非常重要，如果没有这一步的话，后面时�
 
 ubuntu字符集
 
-dpkg-reconfigure --force locales 
+dpkg-reconfigure --force locales
 

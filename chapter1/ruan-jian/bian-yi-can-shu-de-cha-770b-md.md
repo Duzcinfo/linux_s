@@ -1,21 +1,26 @@
-# 编译参数的查看
+# 编译参数的查看.md
 
 * nginx
-  ```shell
+
+  ```text
   /usr/local/nginx/sbin/nginx -v
   ```
+
 * apache
-```shell
+
+  ```text
   cat /usr/local/apache/built/config.nice
-```
+  ```
+
 * php
-```shell
+
+  ```text
     /usr/local/bin/php -i grep configure
-```
+  ```
+
 * mysql
-  
-```shell
+
+```text
     cat /usr/local/mysql/bin/mysqlbug| grep configure
 ```
-
 

@@ -1,6 +1,8 @@
+# apt安装java.md
+
 * ubuntu 安装 java 
 
-```shell
+```text
 sudo add-apt-repository ppa:webupd8team/java  # 添加 Java 的仓库
 sudo apt-get update
 sudo apt-get install oracle-java8-installer  # 默认安装最新的 java
@@ -12,6 +14,4 @@ java version "1.8.0_181"
 Java(TM) SE Runtime Environment (build 1.8.0_181-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
 ```
-
-
 

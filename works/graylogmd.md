@@ -1,6 +1,8 @@
+# graylog.md
+
 报警内容：
 
-```shell
+```text
 body: ##########
 Alert Description: ${check_result.resultDescription}
 Date: ${check_result.triggeredAt}
@@ -19,6 +21,4 @@ ${foreach backlog message}${message}
 ${end}${else}<No backlog>
 ${end}
 ```
-
-
 
