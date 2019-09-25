@@ -29,6 +29,18 @@ docker pull nignx
 
 配置文件 `default.conf`
 
+日志格式
+
+```text
+log_format timed_combined '$remote_addr - $remote_user [$time_local] '
+                                  '"$request" $status $body_bytes_sent '
+                                  '"$http_referer" "$http_user_agent" '
+                                  '{$http_sc-id} {$http_sc-mode} {$http_sc-product} {$http_sc-timer} '
+                                  '$request_time $upstream_response_time';
+    access_log /var/logs/access.log timed_combined 
+    error_log  /var/logs/error.log info
+```
+
 ```text
 upstream duzc{
 server 104.224.162.46;
