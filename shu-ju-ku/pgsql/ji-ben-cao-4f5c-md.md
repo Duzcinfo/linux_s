@@ -10,6 +10,8 @@ psql -U username -h hostname -p port -d dbname
 
 ```sql
 pg_dump  -U name -d ccip_prod --no-owner -f  /tmp/ccip_prod_20181121.sql    #--no-owner参数的意思是不备份数据库owner
+#备份单表
+pg_dump -U hotel_loan_dev  -d hotel_loan_dev  -t  hotel_ruzhulv_bak  --no-owner -h 192.168.31.157  -f  /home/dell/hotel_pg_data/157_hotel_loan_dev/hotel_ruzhulv_bak_bak
 ```
 
 ## 数据库的恢复
