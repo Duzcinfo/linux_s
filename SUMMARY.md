@@ -2,6 +2,7 @@
 
 * [点滴笔记](README.md)
 * [elasticsearch数据库](elasticsearchshu-ju-ku/README.md)
+  * [备份恢复（AWS）](elasticsearchshu-ju-ku/bei-fen-hui-fu-aws.md)
   * [安装.md](elasticsearchshu-ju-ku/an-88c5-md.md)
 * [关系型数据库](shu-ju-ku/README.md)
   * [mysql](shu-ju-ku/mysql/README.md)
