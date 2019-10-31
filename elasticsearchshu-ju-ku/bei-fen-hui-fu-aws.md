@@ -74,7 +74,7 @@ description: 亚马逊云的es备份
 
 * 恢复
 
-```text
+```typescript
 curl -XPOST https://search-jingamz-f2ibhslaaywlaercaf3tl4vdsm.cn-northwest-1.es.amazonaws.com.cn/_snapshot/cs-automated/2019-10-14t10-47-45.34d1f1f3-76d1-40c3-b8f4-ecfcb71775d2/_restore
 ```
 
