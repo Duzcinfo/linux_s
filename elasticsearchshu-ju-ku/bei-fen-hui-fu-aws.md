@@ -78,3 +78,7 @@ description: 亚马逊云的es备份
 curl -XPOST https://search-jingamz-f2ibhslaaywlaercaf3tl4vdsm.cn-northwest-1.es.amazonaws.com.cn/_snapshot/cs-automated/2019-10-14t10-47-45.34d1f1f3-76d1-40c3-b8f4-ecfcb71775d2/_restore
 ```
 
+**注意**：
+
+提醒您一下，如果您使用的AWS自动备份的话， 当ES处在不正常状态的话，自动备份将停止。同时，自动备份只保留15天。 换句话说，如果您的实例处在非正常状态同时超过15天的话，您的自动备份将会消失。 同时，备份只能用于本实例的回复，不能跨ES实例进行回复。 总之，注意时间节点，免得没有有效的备份啊
+
