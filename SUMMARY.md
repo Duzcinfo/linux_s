@@ -28,6 +28,7 @@
     * [进程和线程的区别.md](chapter1/ying-jian/jin-cheng-he-xian-cheng-de-qu-522b-md.md)
   * [软件](chapter1/ruan-jian/README.md)
     * [nginx](chapter1/ruan-jian/nginx/README.md)
+      * [nginx配置转发websocket](chapter1/ruan-jian/nginx/nginx-pei-zhi-zhuan-fa-websocket.md)
       * [配置.md](chapter1/ruan-jian/nginx/pei-7f6e-md.md)
       * [cut\_log.sh](chapter1/ruan-jian/nginx/cutlog-sh.md)
       * [nginx负载.md](chapter1/ruan-jian/nginx/nginxfu-8f7d-md.md)
