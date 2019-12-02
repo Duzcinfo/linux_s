@@ -15,5 +15,5 @@ description: 给用户授权相关的权限
  grant  SELECT  on TABLE meta_table_region to sc_metadata_readonly;  ## 给该用户授权 select
 ```
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image%20%283%29.png)
 
