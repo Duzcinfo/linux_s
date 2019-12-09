@@ -32,3 +32,9 @@ Removed /etc/systemd/system/nginx.service.
 
 成功启动
 
+编译安装升级
+
+执行过程： .configure ---&gt; make    ,然后备份`mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak` 
+
+最后`cp objs/nginx /usr/local/nginx/sbin/`, 升级完成。
+
