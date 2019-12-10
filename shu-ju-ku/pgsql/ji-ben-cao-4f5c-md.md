@@ -2,6 +2,8 @@
 
 ## [https://blog.csdn.net/qq\_31156277/article/details/88821654](https://blog.csdn.net/qq_31156277/article/details/88821654)
 
+## 膨胀表处理方法：[https://www.cnblogs.com/easonbook/p/10945265.html](https://www.cnblogs.com/easonbook/p/10945265.html)
+
 ## 远程登陆 pg 数据库
 
 ```sql
