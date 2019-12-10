@@ -1,5 +1,7 @@
 # 基本操作.md
 
+## [https://blog.csdn.net/qq\_31156277/article/details/88821654](https://blog.csdn.net/qq_31156277/article/details/88821654)
+
 ## 远程登陆 pg 数据库
 
 ```sql
