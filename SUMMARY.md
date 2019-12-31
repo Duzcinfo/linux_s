@@ -11,6 +11,7 @@
     * [问题及解决.md](shu-ju-ku/mysql/wen-ti-ji-jie-51b3-md.md)
     * [读数据库结构.md](shu-ju-ku/mysql/du-shu-ju-ku-jie-6784-md.md)
   * [pgsql](shu-ju-ku/pgsql/README.md)
+    * [命令行查看数据表的建表语句](shu-ju-ku/pgsql/ming-ling-hang-cha-kan-shu-ju-biao-de-jian-biao-yu-ju.md)
     * [pg数据库账用户权限查看](shu-ju-ku/pgsql/pg-shu-ju-ku-zhang-yong-hu-quan-xian-cha-kan.md)
     * [基本操作.md](shu-ju-ku/pgsql/ji-ben-cao-4f5c-md.md)
     * [创建数据库.md](shu-ju-ku/pgsql/chuang-jian-shu-ju-5e93-md.md)
