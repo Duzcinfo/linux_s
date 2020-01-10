@@ -24,6 +24,8 @@ postgresql-client-common/xenial-updates,now 173ubuntu0.2 all [installed]
 
 * 安装
 
+[https://www.postgresql.org/download/linux/ubuntu/](https://www.postgresql.org/download/linux/ubuntu/)
+
 ```text
 sudo apt  install postgresql-client-9.5
 ```
