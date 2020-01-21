@@ -59,3 +59,67 @@ psql:zch_20181128.sql:45: ERROR:  role "yuan" does not exist
 ALTER DATABASE gd_data_test SET timezone TO 'Asia/Chongqing';
 ```
 
+## 查看数据库的大小，表的大小，索引的大小
+
+```sql
+以KB，MB，GB的方式来查看数据库大小
+select pg_size_pretty(pg_database_size('xx_prod'));
+```
+
+### 查看所有数据库的大小
+
+```sql
+select pg_database.datname, pg_database_size(pg_database.datname) AS size from pg_database;   
+
+```
+
+#### 统计各数据库占用磁盘大小
+
+```sql
+ SELECT d.datname AS Name,  pg_catalog.pg_get_userbyid(d.datdba) AS Owner,  
+   CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')  
+       THEN pg_catalog.pg_size_pretty(pg_catalog.pg_database_size(d.datname))  
+       ELSE 'No Access'  
+   END AS SIZE  
+ROM pg_catalog.pg_database d  
+   ORDER BY  
+   CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')  
+       THEN pg_catalog.pg_database_size(d.datname)  
+       ELSE NULL  
+   END DESC -- nulls first  
+   LIMIT 20
+```
+
+### 查看单表
+
+```sql
+\d  tables_name;   # 相当于mysql desc table_name;
+
+查看表大小
+   select pg_relation_size('tables_name');
+   select pg_size_pretty(pg_relation_size('tables_name'));
+
+```
+
+#### 统计数据库中各表占用磁盘大小
+
+```sql
+SELECT  
+    table_schema || '.' || table_name AS table_full_name,  
+    pg_size_pretty(pg_total_relation_size('"' || table_schema || '"."' || table_name || '"')) AS size  
+FROM information_schema.tables  
+ORDER BY  
+    pg_total_relation_size('"' || table_schema || '"."' || table_name || '"') DESC  
+
+```
+
+### 查看索引
+
+```sql
+   \di    # 相当于mysql show index from test; 
+
+   查看表的总大小，包括索引大小
+   
+   select pg_size_pretty(pg_total_relation_size('test')); 
+```
+
